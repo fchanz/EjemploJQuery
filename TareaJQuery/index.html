@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<style>
+#contenedor{
+	width:800px;
+	margin:auto;
+	position:relative;
+}
+#banner, #banner ul, #banner li{
+	width:800px;
+	height:190px;
+	list-style:none;
+}
+#izq{
+	width:650px;
+	height:500px;
+	float:left;
+	background-color:#3CF;
+}
+#der{
+	width:150px;
+	height:500px;
+	float:left;
+	background-color:#0C0;
+}
+#img{
+	width:100px;
+	height:100px;
+	margin:25px auto;
+}
+</style>
+
+<!-- include jQuery library 
+http://jquery.malsup.com/cycle/int.html-->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.2.74.js"></script>
+
+<script type="text/javascript" src="http://malsup.github.com/jquery.easing.1.1.1.js"></script>
+
+<script type="text/javascript" src="javascript/easySlider1.7.js"></script>
+<!--  initialize the slideshow when the DOM is ready -->
+<script type="text/javascript">
+$(document).ready(function() {
+   /* $('#banner').cycle({
+		//fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+		fx:     'scrollDown', 
+    	easing: 'bounceout', 
+    	delay:  -1000,
+	});*/
+	$('#slider').easySlider({
+		auto: true, 
+		continuous: true,
+		controlsFade: true,
+		controlsShow: false
+	});
+	
+	$('#img').cycle({
+    	fx:    'scrollDown', 
+    	easing: 'bounceout',
+    	delay: -2000 
+	});
+});
+</script>
+
+<link href="css/easySlider.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div id="contenedor">
+	<div id="slider">
+    	<ul>				
+            <li><a href="index.html"><img src="imagenes/banner.gif" alt="Index" /></a></li>
+            <li><a href="index.html"><img src="imagenes/banner2.gif" alt="Index" /></a></li>
+            <li><a href="index.html"><img src="imagenes/banner3.gif" alt="Index" /></a></li>
+            <li><a href="index.html"><img src="imagenes/banner4.gif" alt="Index" /></a></li>
+        </ul>
+      <!--	<a href="index.html"><img src="imagenes/banner.gif" alt="Index" /></a>
+        <a href="index.html"><img src="imagenes/banner2.gif" alt="Index" /></a>
+        <a href="index.html"><img src="imagenes/banner3.gif" alt="Index" /></a>
+        <a href="index.html"><img src="imagenes/banner4.gif" alt="Index" /></a>
+        -->
+    </div>
+    <div id="izq">
+    	<p>
+        	Esto es una prueba del JQuery 
+        </p>
+    
+    </div>
+    <div id="der">
+    	<div id="img">
+        	<img src="imagenes/arbol.jpg" />
+            <img src="imagenes/arbol2.jpg" />
+            <img src="imagenes/arbol3.jpg" />
+            <img src="imagenes/arbol4.jpg" />
+        </div>
+    </div>
+</div>
+</body>
+</html>
